@@ -1,5 +1,6 @@
 from models.data import users
-from utils.crud import show_users
+from utils.crud import show_users,add_new_user
+
 
 
 
@@ -9,13 +10,17 @@ if __name__ == "__main__":
      while True:
 
          print("Menu:")
+         print("0. Zakończ program")
          print("1. wyświetl co u znajomych")
+         print("2. dodaj użytkownika")
          menu_option:str=input("Dokonaj wyboru:")
          if menu_option == "0":
              break
          if menu_option == "1":
              show_users(users)
-
+         if menu_option == "2":
+             show_users(users)
+             add_new_user(users)
 
 
 
